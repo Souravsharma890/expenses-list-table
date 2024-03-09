@@ -31,7 +31,7 @@ add_btn.addEventListener("click", () => {
 
   total_amt.textContent = total_val;
   let table_row = table_body.insertRow();
-  let count = 0;
+  let count = (expenseLists.length-1);
 
   const category_cell = table_row.insertCell();
   category_cell.setAttribute("id", `cat_${count}`);
