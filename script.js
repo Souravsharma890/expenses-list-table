@@ -26,7 +26,7 @@ add_btn.addEventListener("click", () => {
     }
 
 
-    expenseLists.push(category_val, amount_val, date_val);
+    expenseLists.push({category_val, amount_val, date_val});
     total_val += amount_val;
 
     total_amt.textContent = total_val;
@@ -50,7 +50,7 @@ add_btn.addEventListener("click", () => {
         table_body.removeChild(table_row);
 
     })
-    const expenseList = expenseLists(expenseLists.length - 1);
+    const expenseList = expenseLists[expenseLists.length - 1];
     category_cell.textContent = expenseList.category_val;
     amount_cell.textContent = expenseList.amount_val;
     date_cell.textContent = expenseList.date_val;
